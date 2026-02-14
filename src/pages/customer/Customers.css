@@ -1,0 +1,51 @@
+.customer-form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.customer-form input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.customer-form button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #145374;
+  color: white;
+  cursor: pointer;
+}
+
+.customer-form button.cancel {
+  background: #999;
+}
+
+.edit-btn {
+  margin-right: 6px;
+  padding: 5px 10px;
+  background: #0a2a43;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+}

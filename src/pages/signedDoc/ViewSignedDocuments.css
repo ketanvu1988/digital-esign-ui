@@ -1,0 +1,137 @@
+.page {
+  padding: 0px;
+  background: #f4f6f9;
+  min-height: 100%;
+}
+
+.page h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a2a43;
+  margin-bottom: 18px;
+}
+
+/* TABLE CONTAINER */
+.table-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  overflow-x: auto;
+}
+
+/* TABLE */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADER */
+.doc-table thead {
+  background: #0a2a43;
+}
+
+.doc-table th {
+  padding: 5px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* BODY */
+.doc-table td {
+  padding: 5px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e6e9ef;
+}
+
+/* ZEBRA */
+.doc-table tbody tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+/* HOVER */
+.doc-table tbody tr:hover {
+  background: #eef5fb;
+}
+
+/* STATUS BADGES */
+.status {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #1e7e34;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.partially_signed {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* ACTION BUTTON */
+.view-btn {
+  background: #145374;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #0a2a43;
+}
+
+.pending-text {
+  color: #999;
+  font-size: 14px;
+}
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  color:gray;
+}
+
+.pagination button:hover {
+  background: #145374;
+  color: #fff;
+}
+
+.pagination button.active {
+  background: #0a2a43;
+  color: #fff;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
