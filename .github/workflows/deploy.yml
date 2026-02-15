@@ -17,12 +17,12 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: root
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user/digital_esign
             git pull
-            sudo podman build -t digital-esign-ui .
-            sudo podman stop digital-esign || true
-            sudo podman rm digital-esign || true
-            sudo podman run -d -p 80:80 --name digital-esign digital-esign-ui
+            podman build --no-cache -t digital-esign-ui .
+            podman stop digital-esign || true
+            podman rm digital-esign || true
+            podman run -d -p 80:80 --name digital-esign digital-esign-ui
