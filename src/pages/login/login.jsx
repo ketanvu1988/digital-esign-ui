@@ -45,7 +45,7 @@ export default function Login() {
     <div className="login-container">
       <div className="login-card">
         <h2 className="login-title">eSign System</h2>
-        <p className="login-subtitle">Secure Digital Signing</p>
+        <p className="login-subtitle">Secure Digital Signing(test server)</p>
 
         <form onSubmit={handleLogin}>
           <div className="form-group">
