@@ -21,8 +21,16 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user/digital_esign
+
+            # Fix git ownership (important)
+            git config --global --add safe.directory /home/ec2-user/digital_esign
+
             git pull
-            podman build --no-cache -t digital-esign-ui .
-            podman stop digital-esign || true
-            podman rm digital-esign || true
-            podman run -d -p 80:80 --name digital-esign digital-esign-ui
+
+            # Build with sudo (needed for port 80)
+            sudo podman build --no-cache -t digital-esign-ui .
+
+            sudo podman stop digital-esign || true
+            sudo podman rm digital-esign || true
+
+            sudo podman run -d -p 80:80 --name digital-esign digital-esign-ui
