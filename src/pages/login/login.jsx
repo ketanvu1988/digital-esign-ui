@@ -48,6 +48,15 @@ export default function Login() {
         <p className="login-subtitle">Secure Digital Signing(test server)</p>
 
         <form onSubmit={handleLogin}>
+           <div className="form-group">
+            <label>Username</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
           <div className="form-group">
             <label>Username</label>
             <input
