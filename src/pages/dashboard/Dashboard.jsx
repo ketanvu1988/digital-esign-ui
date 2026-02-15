@@ -1,4 +1,4 @@
-import "./Dashboard.css";
+import "./dashboard.css";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
 export default function DashboardLayout() {
